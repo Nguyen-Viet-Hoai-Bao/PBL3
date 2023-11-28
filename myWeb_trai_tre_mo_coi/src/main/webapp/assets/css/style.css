@@ -1,0 +1,428 @@
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: Rubik;
+    src: url(/assets/fonts/Rubik-Regular.ttf);
+}
+
+:root{
+    --my-color-1: #32B6A1;
+    --my-color-2: #8BC43F;
+    --my-color-3: #087866;
+    --my-color-4: #065447;
+    --my-color-5: #F5F5F5;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    /* background-color: gray; */
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    /* background-color: #F5F5F5; */
+}
+
+/* top bar */
+
+#top-bar{
+    background-color: #fff;
+    /* position: fixed; */
+    /* top: 0; */
+}
+
+#top-bar .brand{
+    margin: 0 10px;
+    position: relative;
+    width: 40%;
+    display: inline-block;
+}
+
+#top-bar .brand img{
+    width: 50px;
+}
+
+#top-bar .brand h1{
+    position: absolute;
+    display: inline-block;
+    font-family: 'Poppins';
+    color: var(--my-color-3); 
+    font-weight: 900;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+#top-bar .infor{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    height: 54px;
+    
+}
+
+#top-bar .contact i,
+#top-bar .address i{
+    display: inline-block;
+    margin-right: 8px;
+    line-height: 26px;
+    color: var(--my-color-2);
+}
+
+#top-bar .infor h6{
+    display: inline-block;
+    color: rgb(105, 103, 103);
+}
+
+#top-bar .infor .contact{
+    width: 33%;
+}
+
+#top-bar .infor .address{
+    width: 33%;
+}
+
+.infor .login{
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0 5px 0 5px;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    border: 1px solid #D9D9D9;
+    border-radius: 30px;
+    
+}
+
+.infor .login a{
+    padding: 0 5px 0 5px;
+    color: var(--my-color-4)
+    /* font-weight: 900; */
+}
+
+.infor .login i{
+    display: inline-block;
+    margin-right: 8px;
+    line-height: 26px;
+    color: var(--my-color-2);
+}
+
+.infor .login:hover,
+.infor .login:hover a,
+.infor .login:hover .fa-solid {
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); */
+    background-color: var(--my-color-2);
+    color: #fff;
+    border: 0px;
+}
+
+
+/* header */
+
+#header{
+    height: 46px;
+    background-color: var(--my-color-1);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 14px;
+    /* overflow: hidden; */
+    /* position: fixed; */
+    /* background: transparent; */
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav > li{
+    position: relative;
+    border-left: rgb(29, 29, 29,0.1) 1px solid ;
+}
+
+#nav > li > a{
+    color:#fff;
+    font-weight: 500;
+}
+
+#nav li a{
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    /*  */
+    position: relative;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav > li:hover > a {
+    color: var(--my-color-4);
+    font-weight: 900;
+}
+
+.subnav li {
+    margin: 0 10px 0 10px;
+    border-top: rgb(29, 29, 29,0.1) 1px solid;
+}
+
+.subnav li a i{
+    display: none;
+}
+
+.subnav > li:hover > a i{
+    display: inline;
+    color: var(--my-color-2);
+    
+}
+
+.subnav > li:hover > a {
+    font-weight: 600;   
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    font-size: 13px;
+}
+
+#nav .subnav a{
+    color: var(--my-color-4);
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* silder */
+.slider{
+    min-height: 900px;
+}
+/* card */
+.card{
+     width: 30%; 
+    margin-right: 3%;
+    margin-left: 3%;
+    padding-bottom: 7%;
+    background-color: var(--my-color-5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+.cards{
+    display: grid;
+   	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+    padding: 20px;
+    padding-top: 130px;
+    grid-gap: 20px;
+}
+.card-body .col{
+    width: 47%;
+}
+.card-title{
+    display: block;
+    margin-left: 8px;
+    margin-top: 3px;
+    line-height: 26px;
+    font-size: 20px;
+}
+.card-img-top{
+	width: 450px;
+	height: 253.53px;
+	object-fit: cover; 
+}
+.card-text{
+    margin-left: 8px;
+    margin-top: 3px;
+    line-height: 26px;
+    font-size: 16px;
+    width: 100%;
+    text-align: right;
+}
+.card-button{
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 13%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    float:  right;
+    margin-right: 2%;
+    background-color: var(--my-color-2);
+    border: none
+}
+
+/* contact card */
+.contact-card{
+    width: 100%;
+    height: 650px;
+}
+
+
+.accordion-div{
+    margin: 30px auto;
+    width: 75%;
+}
+.accordion {
+    /* background-color: var(--my-color-1); */
+    color: #fff;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    transition: 0.4s;
+  }
+  
+  /* .active, .accordion:hover {
+    background-color: var(--my-color-3); 
+    color: #fff;
+  } */
+  .accordion label{
+    display: block;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  label::after{
+    content: '+';
+    float: right;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+.panel {
+    padding: 10px;
+    display: none;
+    background-color: #fff;
+    overflow: hidden;
+    color: black;
+    border-radius: 8px;
+  }
+  .accordion-div li{
+    list-style: none;
+    width: 100%;
+    margin :15px;
+    margin-left: -10px;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+
+}
+.accordion-div li[name="li1"]{
+    background: var(--my-color-1);
+}
+.accordion-div li[name="li2"]{
+    background: var(--my-color-2);
+}
+.accordion-div li[name="li3"]{
+    background: var(--my-color-3);
+}
+.accordion-div li[name="li4"]{ 
+    background: var(--my-color-4);
+}
+button[name="btn1"]{
+    background: var(--my-color-1);
+}
+button[name="btn2"]{
+    background: var(--my-color-2);
+}
+button[name="btn3"]{
+    background: var(--my-color-3);
+}
+button[name="btn4"]{
+    background: var(--my-color-4);
+}
+.accordion-line p{
+    display: inline-block;
+}
+
+/*MODAL */
+
+.dialog-body {
+    max-width: 640px;
+    max-height: 560px;
+    position: relative;
+    padding: 16px;
+    margin: auto;
+    background-color: #32B6A1;
+    color: #fff;
+    border-radius: 10px;
+    border-style: solid; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 5);
+    border: 10px;
+    border-color: blue;
+}
+.dialog-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    text-decoration: none;
+    color: #32B6A1;
+}
+.card-img-modal{
+    border-radius: 10px;
+	width: 640px;
+	height: 360.58px;
+	object-fit: cover; 
+    
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 7%; /* Location of the box */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  left: 0;
+  top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
